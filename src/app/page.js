@@ -4,6 +4,8 @@ import Greeting from "@/app/components/Greeting";
 import Border from "@/app/components/Border";
 import NestedComponent from "@/app/components/NestedComponent";
 import Container from "@/app/components/Container";
+import UserAccount from "@/app/components/conditional_render/UserAccount";
+import Conditional from "@/app/components/conditional_render/Conditional";
 
 export default function Home() {
     let profile1 = {
@@ -30,12 +32,14 @@ export default function Home() {
         {/*    } }*/}
         {/*    label={ "Some message" }*/}
         {/*    size={100} />*/}
-        <Container style={{
-            backgroundColor: 'blue',
-            color: 'white',
-        }}>
-            Customize Container
-        </Container>
+        {/*<Container style={{*/}
+        {/*    backgroundColor: 'blue',*/}
+        {/*    color: 'white',*/}
+        {/*}}>*/}
+        {/*    Customize Container*/}
+        {/*</Container>*/}
+        {/*<UserAccount role={"admin"} />*/}
+        <Conditional role={'admin'} />
     </div>
   );
 }
