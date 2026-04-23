@@ -6,6 +6,8 @@ import NestedComponent from "@/app/components/NestedComponent";
 import Container from "@/app/components/Container";
 import UserAccount from "@/app/components/conditional_render/UserAccount";
 import Conditional from "@/app/components/conditional_render/Conditional";
+import ItemList from "@/app/components/list/ItemList";
+import TodoListDemo from "@/app/components/list/TodoListDemo";
 
 export default function Home() {
     let profile1 = {
@@ -39,7 +41,9 @@ export default function Home() {
         {/*    Customize Container*/}
         {/*</Container>*/}
         {/*<UserAccount role={"admin"} />*/}
-        <Conditional role={'admin'} />
+        {/*<Conditional role={'admin'} />*/}
+        {/*<ItemList items={ ['Apple', 'Orange', 'Banana' ] } />*/}
+        <TodoListDemo />
     </div>
   );
 }
