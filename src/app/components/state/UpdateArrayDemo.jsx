@@ -26,6 +26,25 @@ let initTodos = [
 		
 ];
 
+function TodoList({ todos, deleteTodoHandler }) {
+		return (<div>
+				{
+						todos.map((todo) => <div key={ todo.id }>
+								{ todo.title }
+								<button type={ 'button' } onClick={ () => deleteTodoHandler(todo.id) }>delete</button>
+						
+						</div>)
+				}
+		</div>)
+}
+
+function TodoEntry(props) {
+		return <>
+				<input value={props.value} onChange={props.onChange}/>
+				<button type={"button"} onClick={props.onClick}>Add</button>
+		</>;
+}
+
 export default function UpdateArrayDemo() {
 		const [ text, setText ] = useState('');
 		let [ todos, setTodos ] = useState(initTodos);
@@ -42,27 +61,10 @@ export default function UpdateArrayDemo() {
 				// todos.filter returns new array
 				setTodos(todos.filter((todo) => todo.id !== id));
 		}
-		let updateTodoHandler = (todo) => {
-				setTodos(todos.filter((todo) => todo.id !== id));
-				todo.title = 'Update';
-				setTodos(todos.map((td) => td.id === todo.id ? todo : td));
-		}
-		let sortHandler = (todo) => {
-				setTodos([...todos.reverse()]);
-		}
 		
 		return (<div>
 				Item List
-				<input value={ text } onChange={ e => setText(e.target.value) }/>
-				<button type={ 'button' } onClick={ addTodoHandler }>Add</button>
-				<button type={ 'button' } onClick={ sortHandler }>Sort</button>
-				
-				{
-						todos.map((todo) => <div key={ todo.id }>
-								{ todo.title }
-								<button type={ 'button' } onClick={ () => deleteTodoHandler(todo.id) }>delete</button>
-								<button type={ 'button' } onClick={ () => updateTodoHandler(todo) }>update</button>
-						</div>)
-				}
+				<TodoEntry value={text} onChange={e => setText(e.target.value)} onClick={addTodoHandler}/>
+				<TodoList todos={todos} deleteTodoHandler={ deleteTodoHandler }/>
 		</div>);
 }

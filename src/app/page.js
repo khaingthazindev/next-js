@@ -16,6 +16,9 @@ import StateProblem1 from "@/app/components/state/StateProblem1";
 import UpdateObject from "@/app/components/state/UpdateObject";
 import UpdateArray from "@/app/components/state/UpdateArray";
 import UpdateArrayDemo from "@/app/components/state/UpdateArrayDemo";
+import Form from "@/app/components/state/Form";
+import ReconciliationOne from "@/app/components/reconciliation/ReconciliationOne";
+import CounterWithReducer from "@/app/components/reducer/CounterWithReducer";
 
 export default function Home() {
     let profile1 = {
@@ -61,7 +64,10 @@ export default function Home() {
         {/*<StateProblem1 />*/}
         {/*<UpdateObject />*/}
         {/*<UpdateArray />*/}
-        <UpdateArrayDemo />
+        {/*<UpdateArrayDemo />*/}
+        {/*<Form />*/}
+        {/*<ReconciliationOne />*/}
+        <CounterWithReducer />
     </div>
   );
 }
