@@ -22,6 +22,7 @@ import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
 import WhyContext from "@/app/components/context/WhyContext";
 import ContextDemo from "@/app/components/context/ContextDemo";
 import TodoReducerWithContext from "@/app/components/context/TodoReducerWithContext";
+import FilterableProductTable from "@/app/components/product/FilterableProductTable";
 
 export default function Home() {
     let profile1 = {
@@ -73,7 +74,8 @@ export default function Home() {
         {/*<TodoListWithReducer />*/}
         {/*<WhyContext />*/}
         {/*<ContextDemo />*/}
-        <TodoReducerWithContext />
+        {/*<TodoReducerWithContext />*/}
+        <FilterableProductTable />
     </div>
   );
 }
