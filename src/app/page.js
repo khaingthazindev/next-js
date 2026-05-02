@@ -14,11 +14,14 @@ import Counter from "@/app/components/Counter";
 import TabDemo from "@/app/components/tab/TabDemo";
 import StateProblem1 from "@/app/components/state/StateProblem1";
 import UpdateObject from "@/app/components/state/UpdateObject";
-import UpdateArray from "@/app/components/state/UpdateArray";
 import UpdateArrayDemo from "@/app/components/state/UpdateArrayDemo";
 import Form from "@/app/components/state/Form";
 import ReconciliationOne from "@/app/components/reconciliation/ReconciliationOne";
 import CounterWithReducer from "@/app/components/reducer/CounterWithReducer";
+import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
+import WhyContext from "@/app/components/context/WhyContext";
+import ContextDemo from "@/app/components/context/ContextDemo";
+import TodoReducerWithContext from "@/app/components/context/TodoReducerWithContext";
 
 export default function Home() {
     let profile1 = {
@@ -63,11 +66,14 @@ export default function Home() {
         {/*<TabDemo />*/}
         {/*<StateProblem1 />*/}
         {/*<UpdateObject />*/}
-        {/*<UpdateArray />*/}
         {/*<UpdateArrayDemo />*/}
         {/*<Form />*/}
         {/*<ReconciliationOne />*/}
-        <CounterWithReducer />
+        {/*<CounterWithReducer />*/}
+        {/*<TodoListWithReducer />*/}
+        {/*<WhyContext />*/}
+        {/*<ContextDemo />*/}
+        <TodoReducerWithContext />
     </div>
   );
 }
