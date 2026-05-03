@@ -23,6 +23,10 @@ import WhyContext from "@/app/components/context/WhyContext";
 import ContextDemo from "@/app/components/context/ContextDemo";
 import TodoReducerWithContext from "@/app/components/context/TodoReducerWithContext";
 import FilterableProductTable from "@/app/components/product/FilterableProductTable";
+import WhyRef from "@/app/components/ref/WhyRef";
+import RefDemo from "@/app/components/ref/RefDemo";
+import FocusInput from "@/app/components/ref/FocusInput";
+import WhyEffect from "@/app/components/effect/WhyEffect";
 
 export default function Home() {
     let profile1 = {
@@ -75,7 +79,11 @@ export default function Home() {
         {/*<WhyContext />*/}
         {/*<ContextDemo />*/}
         {/*<TodoReducerWithContext />*/}
-        <FilterableProductTable />
+        {/*<FilterableProductTable />*/}
+        {/*<WhyRef />*/}
+        {/*<RefDemo />*/}
+        {/*<FocusInput />*/}
+        <WhyEffect />
     </div>
   );
 }
