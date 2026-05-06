@@ -12,12 +12,12 @@ function Todo({ item }) {
 }
 
 function TodoList({ todos }) {
-	return (<div>
-			{ todos.map((item, index) => <Todo key={index} item={item}/>) }
-	</div>);
+		return (<div>
+				{ todos.map((item, index) => <Todo key={index} item={item}/>) }
+		</div>);
 }
 
-export default function TodoListDemo() {
+export default function UseEffectDemo() {
 		const [todos, setTodos] = useState([]);
 		useEffect(() => {
 				fetch('https://dummyjson.com/todos')
@@ -26,5 +26,5 @@ export default function TodoListDemo() {
 								setTodos(data.todos)
 						});
 		}, []);
-	return (<TodoList todos={ todos } />);
+		return (<TodoList todos={ todos } />);
 }

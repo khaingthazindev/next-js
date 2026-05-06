@@ -1,10 +1,11 @@
 'use client';
 
-import {useRef, useState} from "react";
+import {useState} from "react";
+import useCustomRef from "@/app/components/hook/useCustomRef";
 
 export default function RefDemo() {
 		let [count, setCount] = useState(0);
-		let ref = useRef(0);
+		let ref = useCustomRef(0);
 		const incHandler = () => {
 				setCount(count + 1)
 		};

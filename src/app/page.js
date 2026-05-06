@@ -27,6 +27,12 @@ import WhyRef from "@/app/components/ref/WhyRef";
 import RefDemo from "@/app/components/ref/RefDemo";
 import FocusInput from "@/app/components/ref/FocusInput";
 import WhyEffect from "@/app/components/effect/WhyEffect";
+import UseEffectDemo from "@/app/components/effect/UseEffectDemo";
+import WhyCleanUp from "@/app/components/effect/WhyCleanUp";
+import FetchTodo from "@/app/components/hook/FetchTodo";
+import FetchUser from "@/app/components/hook/FetchUser";
+import HookRule from "@/app/components/hook/HookRule";
+import CallbackHookDemo from "@/app/components/hook/CallbackHookDemo";
 
 export default function Home() {
     let profile1 = {
@@ -83,7 +89,15 @@ export default function Home() {
         {/*<WhyRef />*/}
         {/*<RefDemo />*/}
         {/*<FocusInput />*/}
-        <WhyEffect />
+        {/*<WhyEffect />*/}
+        {/*<TodoListDemo />*/}
+        {/*<TodoListWithReducer />*/}
+        {/*<UseEffectDemo />*/}
+        {/*<WhyCleanUp />*/}
+        {/*<FetchTodo />*/}
+        {/*<FetchUser />*/}
+        {/*<HookRule />*/}
+        <CallbackHookDemo />
     </div>
   );
 }

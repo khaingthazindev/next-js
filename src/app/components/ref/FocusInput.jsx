@@ -1,9 +1,9 @@
 'use client';
 
-import {useRef} from "react";
+import useCustomRef from "@/app/components/hook/useCustomRef";
 
 export default function FocusInput() {
-		const inputRef = useRef(null);
+		const inputRef = useCustomRef(null);
 		const focusInputHandler = () => {
 				inputRef.current.focus();
 		}
