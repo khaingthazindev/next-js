@@ -1,23 +1,35 @@
 'use client';
 
-import {useState} from "react";
+import {memo, useCallback, useState} from "react";
 
-function factorial(n)
-{
-		console.log('compute fun ', n);
-		let result = 1;
-		for (let i = 1; i <= n; i++) {
-				result *= i;
+let savedHandler;
+function Child({handler}) {
+		const [childValue, setChildValue] = useState(1);
+		console.log('Child Render');
+		if (!savedHandler) {
+				savedHandler = handler;
 		}
-		return result;
+		console.log('is same ', savedHandler == handler);
+		return (<div>
+				childValue {childValue}
+				<button onClick={handler}>Child btn</button>
+				<button onClick={() => setChildValue(2)}>Child Click</button>
+		</div>);
 }
-
+Child = memo(Child);
 export default function CallbackHookDemo() {
-		console.log('CallbackHookDemo Render');
-		let [n, setN] = useState(0);
-		let fac = factorial(n);
+		console.log('Parent Render');
+		const [count, setCount] = useState(0);
+		const callBack = () => {
+				console.log('Parent callback');
+		}
+		const handler = useCallback(() => {
+				console.log('Parent callback');
+		}, []);
 	return (<div>
-			<input type="text" value={n} onChange={(event) => setN(event.target.value)} />
-			<br />Factorial {fac}
+			Count {count}
+			{/*<Child handler={callBack}/>*/}
+			<Child handler={handler}/>
+			<button onClick={() => setCount(count + 1)}>Parent btn</button>
 	</div>);
 }
