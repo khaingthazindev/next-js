@@ -1,9 +1,10 @@
 // input -> url
 // output -> loading, data
 
-import {useEffect, useState} from "react";
+import {useDebugValue, useEffect, useState} from "react";
 
 export default function useFetch(url) {
+		useDebugValue(url ? url : 'No url');
 		const [loading, setLoading] = useState(true);
 		const [data, setData] = useState([]);
 		

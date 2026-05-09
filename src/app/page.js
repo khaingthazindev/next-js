@@ -33,6 +33,12 @@ import FetchTodo from "@/app/components/hook/FetchTodo";
 import FetchUser from "@/app/components/hook/FetchUser";
 import HookRule from "@/app/components/hook/HookRule";
 import CallbackHookDemo from "@/app/components/hook/CallbackHookDemo";
+import WhySuspense from "@/app/components/suspend/WhySuspense";
+import SearchResultDemo from "@/app/components/hook/SearchResultDemo";
+import ImperativeHandleDemo from "@/app/components/hook/ImperativeHandleDemo";
+import Modal from "@/app/components/portal/Modal";
+import ModalDemo from "@/app/components/portal/ModalDemo";
+import ErrorDemo from "@/app/components/error-boundary/ErrorDemo";
 
 export default function Home() {
     let profile1 = {
@@ -97,7 +103,12 @@ export default function Home() {
         {/*<FetchTodo />*/}
         {/*<FetchUser />*/}
         {/*<HookRule />*/}
-        <CallbackHookDemo />
+        {/*<CallbackHookDemo />*/}
+        {/*<WhySuspense />*/}
+        {/*<SearchResultDemo />*/}
+        {/*<ImperativeHandleDemo />*/}
+        {/*<ModalDemo />*/}
+        <ErrorDemo />
     </div>
   );
 }
