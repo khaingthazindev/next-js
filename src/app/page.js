@@ -39,6 +39,7 @@ import ImperativeHandleDemo from "@/app/components/hook/ImperativeHandleDemo";
 import Modal from "@/app/components/portal/Modal";
 import ModalDemo from "@/app/components/portal/ModalDemo";
 import ErrorDemo from "@/app/components/error-boundary/ErrorDemo";
+import CarouselDemo from "@/app/components/design-pattern/compound-pattern/CarouselDemo";
 
 export default function Home() {
     let profile1 = {
@@ -108,7 +109,24 @@ export default function Home() {
         {/*<SearchResultDemo />*/}
         {/*<ImperativeHandleDemo />*/}
         {/*<ModalDemo />*/}
-        <ErrorDemo />
+        {/*<ErrorDemo />*/}
+        <CarouselDemo>
+            <div>
+                <img src={'/carousel/1.jpg'} alt="" width='100%' height={'300px'}/>
+            </div>
+            <div>
+                <img src={'/carousel/2.jpg'} alt="" width='100%' height={'300px'}/>
+            </div>
+            <div>
+                <img src={'/carousel/3.jpg'} alt="" width='100%' height={'300px'}/>
+            </div>
+            <div>
+                <img src={'/carousel/4.jpg'} alt="" width='100%' height={'300px'}/>
+            </div>
+            <div>
+                <img src={'/carousel/5.jpg'} alt="" width='100%' height={'300px'}/>
+            </div>
+        </CarouselDemo>
     </div>
   );
 }
